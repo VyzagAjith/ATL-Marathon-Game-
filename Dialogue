@@ -18,7 +18,7 @@ func _ready():
 
 
 func _process(_delta):
-    if Input.is_actio_just_pressed("ui_acccept"):
+    if Input.is_action_just_pressed("ui_acccept"):
         if finished:
             nextPhrase()   
 
