@@ -11,7 +11,7 @@ var phraseNum := 0
 var finished = false 
 
 func _ready():
-    $timer.wait_time = textSpeed
+    $timer.wait(textSpeed) = textSpeed
     dialog = getDialog()
     assert(dialg, "Dialogue not found")
     nextPhrase()
