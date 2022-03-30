@@ -1,0 +1,376 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Node2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tick.png" type="Texture" id=2]
+[ext_resource path="res://Control_options.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "pos"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7, 0 ), Vector2( 7, 10 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, 120 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:percent_visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "type1"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "type1"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "type1"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="Node2D" instance=ExtResource( 1 )]
+
+[node name="Control_options" parent="." index="1"]
+script = ExtResource( 3 )
+
+[node name="tick1" parent="Control_options/options_box" index="1"]
+position = Vector2( 275.461, 52.6614 )
+scale = Vector2( 0.169263, 0.205027 )
+texture = ExtResource( 2 )
+
+[node name="Control" parent="Control_options/options_box/tick1" index="0"]
+anchor_left = 0.001
+anchor_top = 0.0
+anchor_right = 1.001
+anchor_bottom = 0.981
+margin_left = -209.419
+margin_top = -52.0
+margin_right = -209.419
+margin_bottom = -52.024
+
+[node name="option_ans1" parent="Control_options/options_box" index="2"]
+visible = false
+
+[node name="option_ans2" type="RichTextLabel" parent="Control_options/options_box" index="3"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+rect_pivot_offset = Vector2( -164, -32 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Makes sense"
+
+[node name="option_ans3" type="RichTextLabel" parent="Control_options/options_box" index="4"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+rect_pivot_offset = Vector2( -164, -32 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "(Say nothing)"
+
+[node name="tick2" type="Sprite" parent="Control_options/options_box" index="5"]
+position = Vector2( 276, 53 )
+scale = Vector2( 0.167363, 0.201923 )
+texture = ExtResource( 2 )
+
+[node name="tick2" type="Control" parent="Control_options/options_box/tick2" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -209.0
+margin_top = -54.0
+margin_right = -210.0
+margin_bottom = -54.0
+
+[node name="tick3" type="Sprite" parent="Control_options/options_box" index="6"]
+position = Vector2( 276, 53 )
+scale = Vector2( 0.167363, 0.201923 )
+texture = ExtResource( 2 )
+
+[node name="tick3" type="Control" parent="Control_options/options_box/tick3" index="0"]
+anchor_right = 1.0
+anchor_bottom = 0.981
+margin_left = -209.0
+margin_top = -54.0
+margin_right = -210.0
+margin_bottom = -52.024
+
+[node name="Polygon2D" type="Polygon2D" parent="Control_options/options_box" index="7"]
+position = Vector2( 7, 0 )
+color = Color( 0.0117647, 0, 0, 1 )
+polygon = PoolVector2Array( 261, 18, 276, 18, 268, 27 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control_options/options_box/Polygon2D" index="0"]
+autoplay = "pos"
+anims/RESET = SubResource( 1 )
+anims/pos = SubResource( 2 )
+
+[node name="questions_box" type="ColorRect" parent="Control_options" index="1"]
+anchor_right = 1.0
+anchor_bottom = 0.25
+color = Color( 0.313726, 1, 0.45098, 1 )
+
+[node name="question" type="RichTextLabel" parent="Control_options/questions_box" index="0"]
+anchor_left = 0.022
+anchor_top = 0.132
+anchor_right = 0.985
+anchor_bottom = 0.868
+margin_left = 16.982
+margin_top = 0.0599999
+margin_right = -10.215
+margin_bottom = -0.0600014
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "You have many choices when it comes to what to say. Find what they are."
+
+[node name="O1" type="ColorRect" parent="Control_options" index="2"]
+anchor_left = 0.113
+anchor_top = 0.278
+anchor_right = 0.451
+anchor_bottom = 0.4
+margin_left = -0.0470009
+margin_top = -0.0400047
+margin_right = 0.130981
+
+[node name="option1" type="Label" parent="Control_options/O1" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Option 1"
+align = 1
+valign = 1
+
+[node name="o1c" type="Control" parent="Control_options/O1" index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="O2" type="ColorRect" parent="Control_options" index="3"]
+anchor_left = 0.113
+anchor_top = 0.278
+anchor_right = 0.451
+anchor_bottom = 0.4
+margin_left = 145.953
+margin_top = -0.0400047
+margin_right = 146.131
+
+[node name="option2" type="Label" parent="Control_options/O2" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Option 2"
+align = 1
+valign = 1
+
+[node name="o2c" type="Control" parent="Control_options/O2" index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="O3" type="ColorRect" parent="Control_options" index="4"]
+anchor_left = 0.113
+anchor_top = 0.278
+anchor_right = 0.451
+anchor_bottom = 0.4
+margin_left = 70.953
+margin_top = 30.96
+margin_right = 71.131
+margin_bottom = 31.0
+
+[node name="option3" type="Label" parent="Control_options/O3" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Option 3"
+align = 1
+valign = 1
+
+[node name="o3c" type="Control" parent="Control_options/O3" index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="afterO1" type="Label" parent="Control_options" index="5"]
+visible = false
+margin_left = 10.0
+margin_top = 120.0
+margin_right = 309.0
+margin_bottom = 171.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Am I not clear? A choice! You have many
+things you can say to your colleagues, only a 
+few things will be right. Just find what they are."
+percent_visible = 0.0
+
+[node name="o1" type="AnimationPlayer" parent="Control_options/afterO1" index="0"]
+anims/RESET = SubResource( 3 )
+anims/type1 = SubResource( 4 )
+
+[node name="afterO2" type="Label" parent="Control_options" index="6"]
+visible = false
+margin_left = 10.0
+margin_top = 120.0
+margin_right = 309.0
+margin_bottom = 171.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Am I not clear? A choice! You have many
+things you can say to your colleagues, only a 
+few things will be right. Just find what they are."
+
+[node name="o2" type="AnimationPlayer" parent="Control_options/afterO2" index="0"]
+anims/RESET = SubResource( 9 )
+anims/type1 = SubResource( 10 )
+
+[node name="afterO3" type="Label" parent="Control_options" index="7"]
+visible = false
+margin_left = 10.0
+margin_top = 120.0
+margin_right = 309.0
+margin_bottom = 171.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Am I not clear? A choice! You have many
+things you can say to your colleagues, only a 
+few things will be right. Just find what they are."
+percent_visible = 0.0
+
+[node name="o3" type="AnimationPlayer" parent="Control_options/afterO3" index="0"]
+anims/RESET = SubResource( 7 )
+anims/type1 = SubResource( 8 )
