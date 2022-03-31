@@ -1,0 +1,538 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://tick.png" type="Texture" id=1]
+[ext_resource path="res://Control_options.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "motion"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.54 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 17.838, 17.4641 ), Vector2( 17.838, 35 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "type1"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.0323061, 2.97671 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "type2"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.99728 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "type3"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.0105168, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "type3_2"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="bg" type="ColorRect" parent="."]
+margin_right = 1025.0
+margin_bottom = 601.0
+color = Color( 0.952941, 0.517647, 0.447059, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control_options" type="Control" parent="."]
+margin_right = 1027.0
+margin_bottom = 596.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options_box" type="ColorRect" parent="Control_options"]
+anchor_top = 0.616
+anchor_right = 0.884
+anchor_bottom = 1.01
+margin_left = 14.0
+margin_top = -0.136047
+margin_right = 14.0
+margin_bottom = 0.039978
+color = Color( 0.921569, 0.815686, 0.243137, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick1" type="Sprite" parent="Control_options/options_box"]
+visible = false
+position = Vector2( 861.375, 196.11 )
+scale = Vector2( 0.27, 0.287 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="tick1" type="Control" parent="Control_options/options_box/tick1"]
+anchor_left = 0.209
+anchor_top = 0.175
+anchor_right = 0.899
+anchor_bottom = 0.769
+margin_left = -207.944
+margin_top = -207.8
+margin_right = -222.984
+margin_bottom = -207.904
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="option_ans1" type="RichTextLabel" parent="Control_options/options_box"]
+visible = false
+anchor_left = 0.009
+anchor_top = 0.03
+anchor_right = 1.0
+anchor_bottom = 0.966
+margin_left = -0.0460005
+margin_top = -0.0500002
+margin_right = -490.0
+margin_bottom = -110.01
+rect_scale = Vector2( 2, 2 )
+custom_colors/default_color = Color( 0.0117647, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+text = "PG: Uh...yes sir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="option_ans2" type="RichTextLabel" parent="Control_options/options_box"]
+visible = false
+anchor_left = 0.01
+anchor_top = 0.03
+anchor_right = 0.985
+anchor_bottom = 0.932
+margin_left = 0.0599995
+margin_top = -0.0500002
+margin_right = -435.59
+margin_bottom = -106.02
+rect_scale = Vector2( 2, 2 )
+custom_colors/default_color = Color( 0.0156863, 0, 0, 1 )
+text = "PG: Yes sir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="option_ans3" type="RichTextLabel" parent="Control_options/options_box"]
+visible = false
+anchor_left = 0.011
+anchor_top = 0.043
+anchor_right = 0.989
+anchor_bottom = 1.0
+margin_left = 0.165999
+margin_top = -0.105
+margin_right = -437.166
+margin_bottom = -112.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "PG: It is a pleasant morning"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" type="Label" parent="Control_options/options_box"]
+anchor_left = 0.006
+anchor_top = 0.021
+anchor_right = 0.981
+anchor_bottom = 0.949
+margin_left = -0.447208
+margin_top = 0.0649996
+margin_right = -439.619
+margin_bottom = -106.015
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Click on the options 1,2,3 to view them...."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick2" type="Sprite" parent="Control_options/options_box"]
+visible = false
+position = Vector2( 861.97, 197.299 )
+scale = Vector2( 0.270484, 0.286527 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="tick2" type="Control" parent="Control_options/options_box/tick2"]
+anchor_left = 0.209
+anchor_top = 0.175
+anchor_right = 0.899
+anchor_bottom = 0.769
+margin_left = -207.944
+margin_top = -207.8
+margin_right = -207.984
+margin_bottom = -207.904
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick3" type="Sprite" parent="Control_options/options_box"]
+visible = false
+position = Vector2( 861.97, 194.921 )
+scale = Vector2( 0.270484, 0.286527 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="tick3" type="Control" parent="Control_options/options_box/tick3"]
+anchor_left = 0.209
+anchor_top = 0.175
+anchor_right = 0.899
+anchor_bottom = 0.769
+margin_left = -207.944
+margin_top = -207.8
+margin_right = -207.984
+margin_bottom = -207.904
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="arrow" type="Polygon2D" parent="Control_options/options_box"]
+visible = false
+position = Vector2( 17.838, 32.4702 )
+color = Color( 0.796078, 0.0823529, 0.0823529, 1 )
+polygon = PoolVector2Array( 829.307, 90.8479, 852.693, 90.8479, 841, 110.782 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="animate" type="AnimationPlayer" parent="Control_options/options_box/arrow"]
+autoplay = "motion"
+anims/motion = SubResource( 1 )
+
+[node name="question_box" type="ColorRect" parent="Control_options"]
+anchor_top = 0.47
+anchor_right = 0.755
+anchor_bottom = 0.562
+margin_left = 16.0
+margin_top = -0.120026
+margin_right = 16.0
+margin_bottom = 0.0479736
+color = Color( 0.00392157, 0, 0, 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="question" type="RichTextLabel" parent="Control_options/question_box"]
+anchor_right = 0.988
+anchor_bottom = 0.764
+margin_top = 6.0
+margin_right = -383.081
+margin_bottom = -18.02
+rect_scale = Vector2( 2, 2 )
+text = "TL: Please introduce yourself Veera"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="O1" type="ColorRect" parent="Control_options"]
+anchor_left = 0.802
+anchor_top = 0.047
+anchor_right = 0.968
+anchor_bottom = 0.124
+margin_left = 4.84094
+margin_top = 4.48292
+margin_right = 4.841
+margin_bottom = 4.59091
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="option1" type="Label" parent="Control_options/O1"]
+anchor_right = 0.988
+anchor_bottom = 1.0
+margin_right = -83.96
+margin_bottom = -22.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.0313726, 0, 0, 1 )
+text = "Option 1"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="o1c" type="Control" parent="Control_options/O1"]
+anchor_right = 0.997
+anchor_bottom = 0.978
+margin_right = 0.0293884
+margin_bottom = 0.0119972
+
+[node name="O2" type="ColorRect" parent="Control_options"]
+anchor_left = 0.802
+anchor_top = 0.19
+anchor_right = 0.971
+anchor_bottom = 0.267
+margin_left = 3.34253
+margin_top = 0.163513
+margin_right = 3.34247
+margin_bottom = 0.2715
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="option2" type="Label" parent="Control_options/O2"]
+anchor_right = 1.0
+anchor_bottom = 0.913
+margin_top = 4.0
+margin_right = -84.0
+margin_bottom = -18.998
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.00784314, 0, 0, 1 )
+text = "Option 2"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="o2c" type="Control" parent="Control_options/O2"]
+anchor_right = 0.997
+anchor_bottom = 0.978
+margin_right = 0.0293884
+margin_bottom = 0.0119972
+
+[node name="O3" type="ColorRect" parent="Control_options"]
+anchor_left = 0.802
+anchor_top = 0.324
+anchor_right = 0.971
+anchor_bottom = 0.401
+margin_left = 3.34595
+margin_top = -0.290222
+margin_right = 3.34589
+margin_bottom = -0.182236
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="option3" type="Label" parent="Control_options/O3"]
+anchor_right = 0.976
+anchor_bottom = 1.0
+margin_right = -82.92
+margin_bottom = -23.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0.00392157, 0, 0, 1 )
+text = "Option 3"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="o3c" type="Control" parent="Control_options/O3"]
+anchor_right = 0.997
+anchor_bottom = 0.978
+margin_right = 0.0293884
+margin_bottom = 0.0119972
+
+[node name="afterO1" type="Label" parent="Control_options"]
+visible = false
+anchor_left = 0.029
+anchor_top = 0.638
+anchor_right = 0.884
+anchor_bottom = 0.99
+margin_left = 0.216999
+margin_top = -0.248016
+margin_right = -438.868
+margin_bottom = -105.04
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " TL: Yes, please go on."
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 0.999842
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="o1" type="AnimationPlayer" parent="Control_options/afterO1"]
+anims/type1 = SubResource( 2 )
+
+[node name="afterO2" type="Label" parent="Control_options"]
+visible = false
+anchor_left = 0.029
+anchor_top = 0.644
+anchor_right = 0.89
+anchor_bottom = 0.983
+margin_left = 0.216999
+margin_top = 0.175964
+margin_right = -442.03
+margin_bottom = -100.868
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " TL: Yes, please go on."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="o2" type="AnimationPlayer" parent="Control_options/afterO2"]
+anims/type2 = SubResource( 3 )
+
+[node name="afterO3" type="Label" parent="Control_options"]
+visible = false
+anchor_left = 0.029
+anchor_top = 0.644
+anchor_right = 0.882
+anchor_bottom = 0.985
+margin_left = 0.216999
+margin_top = 0.175964
+margin_right = -437.814
+margin_bottom = -100.06
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = " TL: Vira, I would like you to introduce yourself, is that clear?
+"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="o3" type="AnimationPlayer" parent="Control_options/afterO3"]
+anims/type3 = SubResource( 4 )
+
+[node name="afterO3_2" type="Label" parent="Control_options"]
+visible = false
+anchor_left = 0.028
+anchor_top = 0.636
+anchor_right = 0.879
+anchor_bottom = 0.985
+margin_left = 0.243999
+margin_top = -0.0560303
+margin_right = -436.733
+margin_bottom = -104.06
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PG:- Yes sir"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="o3_2" type="AnimationPlayer" parent="Control_options/afterO3_2"]
+playback_speed = 2.0
+anims/type3_2 = SubResource( 5 )
+
+[node name="wait" type="Timer" parent="Control_options"]
+
+[node name="points_correct" type="Label" parent="Control_options"]
+visible = false
+anchor_left = 0.032
+anchor_top = 0.644
+anchor_right = 0.874
+anchor_bottom = 0.982
+margin_left = -0.864002
+margin_top = -0.824036
+margin_right = -432.598
+margin_bottom = -101.272
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You made the correct choice! 
++5 Points"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="points_wrong" type="Label" parent="Control_options"]
+visible = false
+anchor_left = 0.032
+anchor_top = 0.644
+anchor_right = 0.874
+anchor_bottom = 0.982
+margin_left = -0.864002
+margin_top = -0.824036
+margin_right = -432.598
+margin_bottom = -101.272
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You made the wrong choice.
+0 Points"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="gui_input" from="Control_options" to="Control_options" method="_on_Control_options_gui_input"]
+[connection signal="gui_input" from="Control_options/options_box/tick1/tick1" to="Control_options" method="_on_tick1_gui_input"]
+[connection signal="gui_input" from="Control_options/options_box/tick2/tick2" to="Control_options" method="_on_tick2_gui_input"]
+[connection signal="gui_input" from="Control_options/options_box/tick3/tick3" to="Control_options" method="_on_tick3_gui_input"]
+[connection signal="gui_input" from="Control_options/O1/o1c" to="Control_options" method="_on_o1c_gui_input"]
+[connection signal="gui_input" from="Control_options/O2/o2c" to="Control_options" method="_on_o2c_gui_input"]
+[connection signal="gui_input" from="Control_options/O3/o3c" to="Control_options" method="_on_o3c_gui_input"]
